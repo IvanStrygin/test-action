@@ -1,6 +1,6 @@
 <?php
 
-function test($a)
+function test ($a)
 {
     echo $a;
 }
