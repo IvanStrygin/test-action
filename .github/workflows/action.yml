@@ -10,17 +10,10 @@ jobs:
     container:
         image: composer:2.3.4
     steps:
-    - name: Set pending status
-      uses: ouzi-dev/commit-status-updater@v2
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Install dependencies
       run: composer install --no-scripts
     - name: Run phpcs
       run: vendor/bin/phpcs
-    - name: Set final status
-      if: always()
-      uses: ouzi-dev/commit-status-updater@v2
-      with:
-        status: "${{ job.status }}"
 
