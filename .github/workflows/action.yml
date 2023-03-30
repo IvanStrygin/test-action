@@ -1,0 +1,16 @@
+"on":
+  push:
+      
+      
+jobs:
+  phpcs:
+    runs-on: ubuntu-latest
+    container:
+        image: composer:2.3.4
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install dependencies
+      run: composer install --no-scripts
+    - name: Run phpcs
+      run: vendor/bin/phpcs
