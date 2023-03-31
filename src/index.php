@@ -1,6 +1,6 @@
 <?php
 
-function test(int $a): void
+function test(int $a) : void
 {
     echo $a;
 }
