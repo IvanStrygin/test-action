@@ -2,5 +2,5 @@
 
 function test(int $a, int $b): void
 {
-    echo $a - $b;
+    echo $a * $b;
 }
